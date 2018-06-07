@@ -8,7 +8,12 @@ The documentation covers these areas:
  - Architecture
  - Control via REST API
  - Code examples
- - Setup via WiFi
- - setup via USB cable
+ - Software Beacon setup
+    - Installation
+    - Use
+ - Hardware Beacon setup
+    - via WiFi
+    - via USB cable
+ - How to contribute to project
  
 Documentation available at [bi-beacon.readthedocs.io](https://bi-beacon.readthedocs.io/en/latest/).
