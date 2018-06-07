@@ -6,7 +6,7 @@ BI-Beacon documentation
 The documentation covers these areas:
 
  - Architecture
- - Control via REST API
+ - REST API specification
  - Code examples
     - Control via beaconcli
     - Control via curl
