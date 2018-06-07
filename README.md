@@ -15,8 +15,8 @@ The documentation covers these areas:
     - Installation
     - Use
  - Hardware Beacon setup
-    - via WiFi
-    - via USB cable
+    - Via WiFi
+    - Via USB cable
  - How to contribute to project
  
 Documentation available at [bi-beacon.readthedocs.io](https://bi-beacon.readthedocs.io/en/latest/).
