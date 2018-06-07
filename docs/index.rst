@@ -12,6 +12,7 @@ BI-Beacon documentation
 
   api
   code_examples
+  setup
 
 Indices and tables
 ==================
