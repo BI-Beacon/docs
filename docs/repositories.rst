@@ -1,6 +1,5 @@
 .. documents what repositories BI-Beacon project consists of
 
-.. _ref_repositories:
 
 How to contribute
 -----------------
@@ -9,6 +8,12 @@ BI-Beacon is partially open source; see the following table on what is and what 
 open.
 
 Any contributions on any of the open source projects a very welcome!
+
+
+.. _ref_repositories:
+
+Repositories
+------------
 
 +-----------+----------------+---------------------------------------+--------------------------------------+
 | What      |  Open source?  |  Comment                              | Link                                 |

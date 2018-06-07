@@ -29,7 +29,7 @@ Setup BI-Beacon via USB
 You can also setup a BI-Beacon using a USB data cable, however requires that you are
 on a Linux machine with a user in the dialout group.
 
-Clone the cli repo (see :ref:`ref_repositories`)
+Clone the cli repo (see :ref:`ref_repositories`).
 
 Then, in a terminal of your choice,
 
