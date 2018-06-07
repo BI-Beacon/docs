@@ -256,8 +256,8 @@ The following will make a POST request to the BI-Beacon state server ``api.bi-be
     curl -X POST -F "color=#00FF00" "https://api.bi-beacon.se/testsystem"
 
 
-Collaboration
--------------
+How to contribute
+-----------------
 
 BI-Beacon is partially open source; see the following table on what is and what is not
 open.
