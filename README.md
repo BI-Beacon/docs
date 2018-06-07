@@ -11,6 +11,7 @@ The documentation covers these areas:
     - Control via beaconcli
     - Control via curl
     - Control via Python
+    - Control via Java
  - Software Beacon setup
     - Installation
     - Usage
