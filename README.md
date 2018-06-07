@@ -1,3 +1,5 @@
+![BI-Beacon image](/docs/_static/bi-beacon.png "Business Intelligence Beacon")
+
 BI-Beacon documentation
 =======================
 
