@@ -1,10 +1,23 @@
-BI-Beacon state server
-======================
+BI-Beacon documentation
+=======================
 
-[![Travis CI status](https://api.travis-ci.org/objarni/leanmodel.svg?branch=master)](https://travis-ci.org/BI-Beacon/server)
+[![Travis CI status](https://api.travis-ci.org/objarni/leanmodel.svg?branch=master)](https://travis-ci.org/BI-Beacon/docs)
 
-This is the official BI-Beacon server.
+The documentation covers these areas:
 
-It also includes the BI-Beacon API, code examples and architecture documentation.
-
-Generated documentation available at [bi-beacon.readthedocs.io](https://bi-beacon.readthedocs.io/en/latest/).
+ - Architecture
+ - REST API specification
+ - Code examples
+    - Control via beaconcli
+    - Control via curl
+    - Control via Python
+    - Control via Java
+ - Software Beacon setup
+    - Installation
+    - Usage
+ - Hardware Beacon setup
+    - Via WiFi
+    - Via USB cable
+ - How to contribute to project
+ 
+Documentation available at [bi-beacon.readthedocs.io](https://bi-beacon.readthedocs.io/en/latest/).

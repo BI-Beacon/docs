@@ -11,7 +11,7 @@ BI-Beacon documentation
    :caption:Contents:
 
   api
-
+  code_examples
 
 Indices and tables
 ==================
