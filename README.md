@@ -13,7 +13,7 @@ The documentation covers these areas:
     - Control via Python
  - Software Beacon setup
     - Installation
-    - Use
+    - Usage
  - Hardware Beacon setup
     - Via WiFi
     - Via USB cable
