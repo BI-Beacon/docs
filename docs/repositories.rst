@@ -1,5 +1,6 @@
 .. documents what repositories BI-Beacon project consists of
 
+.. _ref_repositories:
 
 How to contribute
 -----------------
@@ -24,6 +25,6 @@ Any contributions on any of the open source projects a very welcome!
 |           |                |                                       |                                      |
 +-----------+----------------+---------------------------------------+--------------------------------------+
 
-.. _Documentation: https://bi-beacon.readthedocs.io
+.. _Documentation: https://github.com/BI-Beacon/docs
 .. _`Server repository`: https://github.com/BI-Beacon/server
-.. _`Virtual beacon repository`: https://https://github.com/BI-Beacon/virtual-beacon
+.. _`Virtual beacon repository`: https://github.com/BI-Beacon/virtual-beacon

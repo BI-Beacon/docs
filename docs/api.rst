@@ -36,7 +36,7 @@ BI-Beacon 1 and 2
 State Server
     This is the source of state for BI-Beacons.
 
-Controlling system
+Caller systems
     This is the user of the Beacons - where API calls originate.
 
 
@@ -125,6 +125,8 @@ to switch to.
 
 It Just Works™! :)
 
+
+.. _ref_api:
 
 API
 ===
