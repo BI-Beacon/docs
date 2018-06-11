@@ -2,10 +2,13 @@
 #
 
 # Default build target is making single page html
-all:	static-resources singlehtml
+all:	static-resources code-examples singlehtml
 
 static-resources:
-		test -z "`dot -Tpng architecture.gv -o_static/architecture.png 2>&1`"
+	test -z "`dot -Tpng architecture.gv -o_static/architecture.png 2>&1`"
+
+code-examples:
+	cd .. ; ./dist/generate-code-examples.sh
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
@@ -22,7 +25,7 @@ setup:	Pipfile
 	pipenv --three install
 
 clean:
-	rm -rf _build *~ 2>/dev/null
+	rm -rf _build *~ \#*\# 2>/dev/null
 
 .PHONY: help Makefile clean setup
 
