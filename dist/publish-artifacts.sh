@@ -1,8 +1,5 @@
 #!/bin/bash
 
-set -opipefail
-set -eE
-
 if [ "${TRAVIS_BRANCH}" == "mad-publish-artifacts" ] ; then
     TMPDR="$(mktemp -d)"
     
