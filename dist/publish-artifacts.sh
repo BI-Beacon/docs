@@ -7,12 +7,12 @@ if [ "${TRAVIS_BRANCH}" == "mad-publish-artifacts" ] ; then
     git config --global user.name  "Travis CI"
     
     git clone -b artifacts https://${GH_TOKEN}@github.com/BI-Beacon/build-artifacts.git "${TMPDR}"
-    
-    git rm -r ${TMPDR}/docs/*
+
+    (cd ${TMPDR} && git rm -r docs/*)
     
     cp -a docs/_build/* ${TMPDR}/docs/
     cd "${TMPDR}"
+    git add -A 
     git commit -a -m 'Automated build'
     git push
 fi
-
