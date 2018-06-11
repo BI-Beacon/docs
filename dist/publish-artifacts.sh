@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "${TRAVIS_BRANCH}" == "mad-publish-artifacts" ] ; then
+if [ "${TRAVIS_BRANCH}" == "master" ] ; then
     TMPDR="$(mktemp -d)"
     
     git config --global user.email "travis@travis-ci.org"
