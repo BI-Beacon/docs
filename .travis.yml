@@ -23,6 +23,7 @@ before_script:
   - curl -F "period=5000" -F "color=#0000FF" "https://api.cilamp.se/v1/${BI_BEACON_CHANNELID}/"
 
 after_success:
+  - ./dist/publish-artifacts.sh
   - curl -F "color=#00FF00" "https://api.cilamp.se/v1/${BI_BEACON_CHANNELID}/"
 
 after_failure:
