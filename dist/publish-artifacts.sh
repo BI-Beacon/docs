@@ -8,8 +8,8 @@ if [ "${TRAVIS_BRANCH}" == "mad-publish-artifacts" ] ; then
     
     git clone -b artifacts https://${GH_TOKEN}@github.com/BI-Beacon/build-artifacts.git "${TMPDR}"
 
-    (cd ${TMPDR} && git rm -r docs/*)
-    
+    (cd ${TMPDR} && git rm -r docs/* ; mkdir docs )
+
     cp -a docs/_build/* ${TMPDR}/docs/
     cd "${TMPDR}"
     git add -A 
