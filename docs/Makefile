@@ -23,6 +23,7 @@ help:
 
 setup:	Pipfile
 	pipenv --three install
+	sudo apt install graphviz
 
 clean:
 	rm -rf _build *~ \#*\# 2>/dev/null
