@@ -181,7 +181,7 @@ The significance of individual colors and pulses is up to your imagination.
 Change state
 ------------
 
-:URL:       ``https://:beacon-server/:systemid/``
+:URL:       ``https://:beacon-server/v1/:systemid/``
 
 :Method:    POST
 
