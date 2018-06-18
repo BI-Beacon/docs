@@ -67,14 +67,14 @@ You can setup a BI-Beacon using a mobile or desktop device that connects to the 
           3. Move the BI-Beacon far away from the router
 
           When you plug it in again, BI-Beacon will try to connect and
-          fail, and then go into setup mode again, see setup steps above.
+          fail. It will then go into setup mode again.
 
 
 Setup BI-Beacon via USB
 =======================
 
-You can also setup a BI-Beacon using a USB data cable, however requires
-that you are on a Linux machine with a user in the dialout group.
+You can also setup a BI-Beacon using a USB data cable, however this requires
+that you are on a Linux machine with a user in the `dialout` usergroup.
 
 Clone the cli repo (see :ref:`ref_repositories`).
 
