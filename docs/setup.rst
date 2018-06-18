@@ -63,7 +63,7 @@ You can setup a BI-Beacon using a mobile or desktop device that connects to the 
           connect to the router. E.g by doing any of the following:
 
           1. Change SSID or password on the router
-          2. turn off the router temporarily
+          2. Turn off the router temporarily
           3. Move the BI-Beacon far away from the router
 
           When you plug it in again, BI-Beacon will try to connect and
