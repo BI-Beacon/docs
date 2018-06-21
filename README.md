@@ -10,8 +10,7 @@ The documentation covers these areas:
  - Architecture
  - REST API specification
  - Code examples
-    - Control via beaconcli
-    - Control via curl
+    - Control via php
     - Control via Python
     - Control via Java
  - Software Beacon setup
