@@ -2,10 +2,7 @@
 #
 
 # Default build target is making single page html
-all:	static-resources code-examples singlehtml
-
-static-resources:
-	test -z "`dot -Tpng architecture.gv -o_static/architecture.png 2>&1`"
+all:	code-examples singlehtml
 
 code-examples:
 	cd .. ; ./dist/generate-code-examples.sh
