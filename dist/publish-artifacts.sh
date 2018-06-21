@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -eE
+set -o pipefail
+
 if [ "${TRAVIS_BRANCH}" == "master" ] ; then
     echo "On \`master' branch - pushing to artifacts repository."
     TMPDR="$(mktemp -d)"
