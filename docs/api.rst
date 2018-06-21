@@ -9,20 +9,22 @@ BI-Beacons use a RESTful API.
 
 There is only one end-point: ``/<systemid>``.
 
-This endpoint serves as the controlling mechanism for
-*system* with ID `systemid`.
+This endpoint serves as the controlling mechanism for *system* with ID
+`systemid`.
 
-A complete endpoint URL may look something like this:
+Here is an example of a complete endpoint:
 
-   ``https://beacon-api.abcbusiness.com/my-super-monitor``
+   ``https://api.cilamp.se/v1/our-beautiful-monitor``
 
-Multiple beacons can be configured to  use the same systemid - this is
+
+Multiple beacons can be configured to use the same systemid - this is
 intentional and means you can deploy several Beacons that indicate the
 same thing.
 
-This functionality  may, for  instance, be used  if you  have multiple
+This functionality may, for  instance, be used  if you  have multiple
 offices, or if  you want a Beacon  both in the conference  room and at
 the coffee machine.
+
 
 Architecture
 ============
@@ -31,7 +33,8 @@ Architecture
     :width: 90%
 
 BI-Beacon 1 and 2
-    This is either physical or virtual BI-Beacon devices, showing some state of something interesting to your business.
+    This is either physical or virtual BI-Beacon devices, showing some state
+    of something interesting to your business.
 
 State Server
     This is the source of state for BI-Beacons.
@@ -178,7 +181,7 @@ The significance of individual colors and pulses is up to your imagination.
 Change state
 ------------
 
-:URL:       ``https://:beacon-server/:systemid/``
+:URL:       ``https://:beacon-server/v1/:systemid/``
 
 :Method:    POST
 
@@ -190,13 +193,17 @@ Change state
       **period:** length of the pulse in milliseconds (optional, format integer)
     }
 
-
-
 :beacon-server
     This is the hostname of the state server.
 
 :systemid
     This is the system identifier you want to change the state of.
+
+.. note:: At the moment, there is only one official beacon state server.
+          It is available at this URL:
+
+             ``https://api.cilamp.se/v1``
+
 
 *Note*: the parameters should be transmitted as URL encoded Form Data,
 i.e. the request header Content-Type should be
@@ -251,9 +258,11 @@ On error
 Sample Curl Call
 ~~~~~~~~~~~~~~~~
 
-The following will make a POST request to the BI-Beacon state server ``api.bi-beacon.se`` to change the state of the system identified by `testsystem` to green:
+The following will make a POST request to the BI-Beacon state server
+``api.cilamp.se`` to change the state of the system identified by
+`testsystem` to green:
 
 ::
 
-    curl -X POST -F "color=#00FF00" "https://api.bi-beacon.se/testsystem"
+    curl -X POST -F "color=#00FF00" "https://api.cilamp.se/v1/testsystem"
 
