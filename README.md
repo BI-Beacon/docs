@@ -22,3 +22,7 @@ The documentation covers these areas:
  - How to contribute to project
  
 Documentation available at [bi-beacon.readthedocs.io](https://bi-beacon.readthedocs.io/en/latest/).
+
+[Travis CI](https://travis-ci.org/BI-Beacon/docs)
+
+
