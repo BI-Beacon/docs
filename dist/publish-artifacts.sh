@@ -13,6 +13,7 @@ if [ "${TRAVIS_BRANCH}" == "master" ] ; then
     
     git clone -b artifacts "https://${GH_TOKEN}@github.com/BI-Beacon/build-artifacts.git" "${TMPDR}"
 
+
     (cd "${TMPDR}" && (git rm -r docs/* || true))
     (cd "${TMPDR}" && mkdir docs)
 
