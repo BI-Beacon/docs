@@ -17,4 +17,4 @@ sphinx-autobuild = ">=0.7.1"
 
 [requires]
 
-python_version = "3.5"
+python_version = "3"
