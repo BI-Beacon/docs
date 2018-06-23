@@ -14,7 +14,11 @@ if [ "${TRAVIS_BRANCH}" == "master" ] ; then
     git clone -b artifacts "https://${GH_TOKEN}@github.com/BI-Beacon/build-artifacts.git" "${TMPDR}"
 
     (cd "${TMPDR}" && (git rm -r docs/* || true))
-    if [ ! -d "${TMPDR}/docs" ] && mkdir "${TMPDR}/docs"
+    if [ ! -d "${TMPDR}/docs" ] ; then
+        mkdir "${TMPDR}/docs"
+    fi
+
+    ls -la "${TMPDR}"
 
     find . -name '*.rst' -o -path './docs/_build/*' -o -path './docs/_static/*' -print0 \
       | tar --null -T /dev/stdin -cvf - | ( "cd ${TMPDR}/docs" && tar xvf - )
