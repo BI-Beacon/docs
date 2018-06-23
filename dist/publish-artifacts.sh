@@ -18,7 +18,7 @@ if [ "${TRAVIS_BRANCH}" == "master" ] ; then
     (cd "${TMPDR}" && mkdir docs)
 
     find . -name '*.rst' -o -path './docs/_build/*' -o -path './docs/_static/*' -print0 \
-      | tar --null -T /dev/stdin -cvf - | ( "cd ${TMPDIR}/docs" && tar xvf - )
+      | tar --null -T /dev/stdin -cvf - | ( "cd ${TMPDR}/docs" && tar xvf - )
 
     cd "${TMPDR}" || exit 1
     git add -A 
