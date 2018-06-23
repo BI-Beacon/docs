@@ -20,14 +20,19 @@ if [ "${TRAVIS_BRANCH}" == "master" ] ; then
 
     ls -la "${TMPDR}"
 
+    cd docs/
     echo "Listing current directory: $(pwd)"
     find . -type f
-    find . -name '*.rst' -o -path './docs/_build/*' -o -path './docs/_static/*'
+    find . -name '*.rst' -o -path './_build/*' -o -path './_static/*'
     
-    find . -name '*.rst' -o -path './docs/_build/*' -o -path './docs/_static/*' -print0 \
-      | tar --null -T /dev/stdin -cvf - | ( cd "${TMPDR}/docs" && tar xvf - )
+    find . -name '*.rst' -o -path './_build/*' -o -path './_static/*' -print0 \
+      | tar --null -T /dev/stdin -cvvvf - | ( cd "${TMPDR}/docs" && tar xvvvf - )
 
     cd "${TMPDR}"
+
+    echo "Listing contents of commitable directory: ${TMPDR}"
+    find .
+    
     git add -A 
     git commit -a -m 'Automated build'
     git push
