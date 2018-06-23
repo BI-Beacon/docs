@@ -13,14 +13,14 @@ if [ "${TRAVIS_BRANCH}" == "master" ] ; then
     
     git clone -b artifacts "https://${GH_TOKEN}@github.com/BI-Beacon/build-artifacts.git" "${TMPDR}"
 
-
     (cd "${TMPDR}" && (git rm -r docs/* || true))
-    (cd "${TMPDR}" && mkdir docs)
+
+    if [ ! -d "${TMPDR}/docs" ] && mkdir "${TMPDR}/docs"
 
     find . -name '*.rst' -o -path './docs/_build/*' -o -path './docs/_static/*' -print0 \
       | tar --null -T /dev/stdin -cvf - | ( "cd ${TMPDR}/docs" && tar xvf - )
 
-    cd "${TMPDR}" || exit 1
+    cd "${TMPDR}"
     git add -A 
     git commit -a -m 'Automated build'
     git push
