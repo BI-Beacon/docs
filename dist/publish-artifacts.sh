@@ -21,11 +21,11 @@ if [ "${TRAVIS_BRANCH}" == "master" ] ; then
     ls -la "${TMPDR}"
 
     cd docs/
+    
     echo "Listing current directory: $(pwd)"
     find . -type f
-    find . -name '*.rst' -o -path './_build/*' -o -path './_static/*'
-    
-    find . -name '*.rst' -o -path './_build/*' -o -path './_static/*' -print0 \
+
+    find . -type f -print0 \
       | tar --null -T /dev/stdin -cvvvf - | ( cd "${TMPDR}/docs" && tar xvvvf - )
 
     cd "${TMPDR}"
