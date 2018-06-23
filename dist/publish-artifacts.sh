@@ -22,10 +22,9 @@ if [ "${TRAVIS_BRANCH}" == "master" ] ; then
 
     cd docs/
 
-    rm -rf .venv
+    find . -name .venv -print0 | xargs -r0n rm -rf 
     
     echo "Listing eligble files in current directory: $(pwd)"
-    find . \( -name '*.rst' -o -name '*.pickle' -o -name '*.doctree' -o -name '*.venv' -o -name '*.html' -o -name '*.inv' -o -name '*.buildinfo' -o -name '*.js' -o -name '*.png' -o -name '*.jpg' -o -name '*.gif' -o -name '*.css' -o -name '*.js' \)
     find . \( -name '*.rst' -o -name '*.pickle' -o -name '*.doctree' -o -name '*.venv' -o -name '*.html' -o -name '*.inv' -o -name '*.buildinfo' -o -name '*.js' -o -name '*.png' -o -name '*.jpg' -o -name '*.gif' -o -name '*.css' -o -name '*.js' \) -print0 \
       | tar --null -T /dev/stdin -cvvvf - | ( cd "${TMPDR}/docs" && tar xvvvf - )
 
