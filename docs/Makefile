@@ -23,6 +23,7 @@ help:
 
 setup:	Pipfile
 	echo "## setup before pipenv"
+	pip install pip==18.0
 	pipenv --rm & true
 	pipenv --three install
 	pipenv run pip install pip==18.0
