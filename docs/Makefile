@@ -19,7 +19,7 @@ help:
 	pipenv run $(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 setup:	Pipfile
-	pipenv rm
+	pipenv --rm
 	pipenv --three install
 	sudo apt install graphviz
 
