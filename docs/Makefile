@@ -23,7 +23,9 @@ help:
 
 setup:	Pipfile
 	echo "## setup before pipenv"
-    pipenv run pip install pip==18.0
+	pipenv --rm & true
+	pipenv --three install
+	pipenv run pip install pip==18.0
 	echo "## setup before graphviz"
 	sudo apt install graphviz
 	echo "## setup end"
