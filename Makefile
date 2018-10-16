@@ -6,9 +6,11 @@ $(SUBDIRS):
 	$(MAKE) -C $@ $(MAKECMDGOALS)
 
 tests:
+	echo "# tests"
 	shellcheck dist/*.sh
 
 clean:
+	echo "# clean"
 	rm -f *~
 
 .PHONY: $(TOPTARGETS) $(SUBDIRS)
