@@ -20,8 +20,8 @@ help:
 
 setup:	Pipfile
 	pipenv --rm; true
-	pipenv --three install
-	sudo apt install graphviz
+	pipenv --three install -y
+	sudo apt install graphviz -y
 
 clean:
 	rm -rf _build *~ \#*\# 2>/dev/null
