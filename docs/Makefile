@@ -22,9 +22,11 @@ help:
 	pipenv run $(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 setup:	Pipfile
-	echo "## setup"
+	echo "## setup before pipenv"
 	pipenv --three install
+	echo "## setup before graphviz"
 	sudo apt install graphviz
+	echo "## setup end"
 
 clean:
 	echo "## clean"
