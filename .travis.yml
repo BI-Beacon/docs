@@ -1,19 +1,13 @@
 language: python
 python:
   - '3.5'
+  - '3.6'
 env:
   global:
-    - PIPENV_VENV_IN_PROJECT=1
-    - PIPENV_IGNORE_VIRTUALENVS=1
-    - PIPENV_NOSPIN=1
     - secure: g+RH5nPJG+umCUJsBSuB7lF9pQP0cfq/lthmzZVVpyEEtv37ESz/2WTsuMYESBAUoKNwvO6mvq6zo1mdkdaWlMLDD39XY7l/Xil2KHzNm4eK64xhC1kpL11pvzYUebQIzO2K70mJuUU2yeFiByob9BtW34Age0w9uFwSC3PLuMofQvv+k7tbYBWXwStyOHzB13pWoGUo20S3K8FMGsbzctOTDk4W6j1G+g0GK7t4Q112yFgahtVl1zQXVoLSVlV8naiZZG1jR9czrBwAZg54qR02vgc4sUv/M9nG6MSBfQtq7WLLKvT47UxnbC/oMmA9CmrIf4Y/ppbJ1KSpF1H28NaTnTR0ij2EbPLNtN81GrHllN2LC40HQcl90+mknKACru1ekw49mEGxFWShCXUmJl5K9KkyGOviXx0u1nn8PVHVgwgetLbjlz5J/ssVZWsIsSqHdt+HcUyAXueaY0W+yy7rsYE1H50JVIf3tYpapbIF8HJe1krTCOi1KDJfsZRcXsvLPbeczxnopMM6Z061Z9kcNFevv0BCG881TjNpubG6axTNF6o/9mp1wBeOybEKDNN98jGm0IRD3PRGMJnX9FhOqznDmYSHnjOeahFx4hzwHmRFgEH4pHWvn4+b122vn7O+Ju7uhdhXjyHuWls6qLn+ck4rSVgUfx3eIUv9ETc=
 
 install:
-  - pip install pip==18.0
-  - pip install pipenv
-  - pipenv lock
-  - pipenv sync
-  - make setup
+  - make install
 
 script:
   - make
