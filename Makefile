@@ -9,7 +9,7 @@ tests:
 	echo "# tests"
 	shellcheck dist/*.sh
 
-install: requirements.txt
+install:
 	echo "## start"
 	python3 -m venv .venv
 	( . .venv/bin/activate && pip install -r requirements.txt )
@@ -19,5 +19,6 @@ install: requirements.txt
 clean:
 	echo "# clean"
 	rm -f *~
+	rm -rf .venv
 
 .PHONY: $(TOPTARGETS) $(SUBDIRS)
