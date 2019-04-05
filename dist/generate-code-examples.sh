@@ -19,7 +19,7 @@ find . -mindepth 1 -type d -not -path '*/.*' | sort | while read -r LANG ; do
         (
             LNG="$(sed -n 's%^# \(.*\)%\1%p' "${LANG}/README.md")"
             echo -e "${LNG}\\n${LNG//?/-}\\n\\n.. code-block:: ${LNG,,?}\\n"
-            find "${LANG}" -type f -not -name 'README.md' -print0 | \
+            find "${LANG}" -type f -not -name 'README.md' -not -name 'Makefile' -print0 | \
                 xargs -r0n 1 sed 's#^#   #'
             echo -e "\\n\\n"
         ) >> "${WD}/docs/code_examples.rst"
