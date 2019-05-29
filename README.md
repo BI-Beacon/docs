@@ -9,7 +9,7 @@ The documentation covers these areas:
 
  - Architecture
  - REST API specification
- - Code examples
+ - Code examples for at least:
     - Control via php
     - Control via Python
     - Control via Java
