@@ -5,6 +5,12 @@ $(TOPTARGETS): $(SUBDIRS)
 $(SUBDIRS):
 	$(MAKE) -C $@ $(MAKECMDGOALS)
 
+html:
+	( . .venv/bin/activate && sphinx-build -b html docs/ _build/ )
+
+watch:
+	( . .venv/bin/activate && sphinx-autobuild -b html docs/ _build/ )
+
 tests:
 	echo "# tests"
 	shellcheck dist/*.sh
