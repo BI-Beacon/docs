@@ -13,6 +13,7 @@ script:
   - make
 
 before_install:
+  - sudo apt-get install -y graphviz
   - curl -F "period=5000" -F "color=#AB00FF" "https://api.cilamp.se/v1/${BI_BEACON_CHANNELID}/"
 
 before_script:
