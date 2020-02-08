@@ -25,6 +25,7 @@ install:
 clean:
 	echo "# clean"
 	rm -f *~
-	rm -rf .venv
+	rm -rf .venv/
+	rm -rf _build/
 
 .PHONY: $(TOPTARGETS) $(SUBDIRS)
